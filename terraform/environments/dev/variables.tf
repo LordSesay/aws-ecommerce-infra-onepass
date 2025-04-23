@@ -26,3 +26,14 @@ variable "enable_waf" {
   type        = bool
   default     = false
 }
+variable "aws_access_key" {
+  description = "AWS access key for CI/CD pipelines"
+  type        = string
+  sensitive   = true
+}
+
+variable "aws_secret_key" {
+  description = "AWS secret key for CI/CD pipelines"
+  type        = string
+  sensitive   = true
+}
