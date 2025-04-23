@@ -26,13 +26,18 @@ jobs:
         working-directory: terraform/environments/dev
         run: terraform plan
 
+      - name: DEBUG: Print AWS Vars (safe)
+        run: |
+          echo "Access Key: ${{ secrets.AWS_ACCESS_KEY_ID }}"
+          echo "Region: ${{ secrets.AWS_REGION }}"
+
       - name: Terraform Apply
         working-directory: terraform/environments/dev
         run: terraform apply -auto-approve \
-             -var "aws_access_key=${{ secrets.AWS_ACCESS_KEY_ID }}" \
-             -var "aws_secret_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+          -var="aws_access_key=${{ secrets.AWS_ACCESS_KEY_ID }}" \
+          -var="aws_secret_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" \
+          -var="aws_region=${{ secrets.AWS_REGION }}"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
-

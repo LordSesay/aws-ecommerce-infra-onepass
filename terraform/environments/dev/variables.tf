@@ -27,13 +27,18 @@ variable "enable_waf" {
   default     = false
 }
 variable "aws_access_key" {
-  description = "AWS access key for CI/CD pipelines"
   type        = string
+  description = "Access key for AWS"
   sensitive   = true
 }
 
 variable "aws_secret_key" {
-  description = "AWS secret key for CI/CD pipelines"
   type        = string
+  description = "Secret key for AWS"
   sensitive   = true
+}
+
+variable "aws_region" {
+  type        = string
+  default     = "us-east-1"
 }
