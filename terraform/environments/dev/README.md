@@ -41,7 +41,7 @@ This project documents the full integration of my clothing brand's e-commerce we
 ---
 
 ## **Author**
-Malcolm Sesay  
+Malcolm L. Sesay  
 Founder of [OnePass Apparel](https://onepassapparel.com)  
 AWS Cloud Engineer 
 [LinkedIn](https://www.linkedin.com/in/malcolmsesay)
