@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OnePass Apparel – Achieve Excellence in Motion. Quality apparel engineered for performance and lifestyle." />
+  <meta name="theme-color" content="#0f0f0f" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="OnePass Apparel" />
+  <meta property="og:description" content="Quality apparel engineered for performance and lifestyle." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://onepassapparel.com" />
+  <meta property="og:image" content="https://onepassapparel.com/og-image.jpg" />
+  <title>OnePass Apparel | Performance Lifestyle Apparel</title>
+  
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" media="print" onload="this.media='all'" />
+  
+  <style>
+    :root {
+      --primary-bg: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+      --text-primary: #fff;
+      --text-secondary: #ccc;
+      --text-muted: #888;
+      --button-bg: #ffffff;
+      --button-hover: #e0e0e0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--primary-bg);
+      color: var(--text-primary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.5rem);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: clamp(1rem, 3vw, 1.125rem);
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--button-bg);
+      color: #000;
+      font-weight: 700;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .button:hover,
+    .button:focus {
+      background-color: var(--button-hover);
+      transform: translateY(-2px);
+    }
+
+    .button:focus {
+      outline: none;
+      border-color: var(--text-primary);
+    }
+
+    footer {
+      position: fixed;
+      bottom: 1rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .button {
+        transition: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <main>
+      <h1>OnePass Apparel</h1>
+      <p>Achieve Excellence in Motion</p>
+      <a href="#" class="button" role="button" aria-label="Shop Coming Soon">Shop Coming Soon</a>
+    </main>
+    <footer>
+      <p>&copy; 2025 OnePass Apparel. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

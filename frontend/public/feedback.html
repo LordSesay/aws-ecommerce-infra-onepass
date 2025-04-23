@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Feedback</title>
+</head>
+<body>
+  <h2>Leave Feedback</h2>
+  <form id="feedbackForm">
+    <input type="text" name="name" placeholder="Your name" required><br>
+    <input type="email" name="email" placeholder="Your email" required><br>
+    <input type="text" name="product" placeholder="Product name" required><br>
+    <input type="number" name="rating" min="1" max="5" placeholder="Rating (1-5)" required><br>
+    <textarea name="comment" placeholder="Your comments" required></textarea><br>
+    <button type="submit">Submit Feedback</button>
+  </form>
+
+  <script src="public/js/api.js"></script>
+  <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        product: form.product.value,
+        rating: parseInt(form.rating.value),
+        comment: form.comment.value
+      };
+      postData("feedback", data);
+    });
+  </script>
+</body>
+</html>

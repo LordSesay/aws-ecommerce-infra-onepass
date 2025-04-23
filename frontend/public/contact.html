@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+</head>
+<body>
+  <h2>Contact Form</h2>
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Your name" required><br>
+    <input type="email" name="email" placeholder="Your email" required><br>
+    <textarea name="message" placeholder="Your message" required></textarea><br>
+    <button type="submit">Send</button>
+  </form>
+
+  <script src="public/js/api.js"></script>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+      };
+      postData("contact", data);
+    });
+  </script>
+</body>
+</html>
