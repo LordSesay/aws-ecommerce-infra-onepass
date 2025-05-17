@@ -65,6 +65,30 @@ Traditional e-commerce platforms face challenges such as:
 
 ## 🛠 Folder Structure
 
+```
+aws-ecommerce-infra-onepass/
+├── modules/
+│ ├── lambda_checkout/
+│ ├── lambda_contact/
+│ ├── lambda_feedback/
+│ ├── lambda_get_order/
+│ ├── lambda_gateway/
+│ ├── dynamodb_orders/
+│ ├── s3_static_site/
+│ ├── acm_cert/
+│ ├── route53/
+│ └── cloudfront/
+├── frontend/
+│ ├── index.html
+│ ├── checkout.html
+│ ├── admin-dashboard.html
+│ └── js/
+├── assets/
+│ └── onepass-ecommerce-architecture.png
+├── main.tf
+├── README.md
+└── .gitignore
+```
 ---
 
 ## 💼 Business Use Case
